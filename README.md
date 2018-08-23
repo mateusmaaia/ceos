@@ -1,1 +1,1 @@
-# project-magic-eye
+# project-ceos
