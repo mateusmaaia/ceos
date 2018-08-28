@@ -1,10 +1,10 @@
-package com.example.mateusmaia.poccam
+package com.example.mateusmaia.ceos
 
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.mateusmaia.poccam.databinding.ActivityMainBinding
+import com.example.mateusmaia.ceos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

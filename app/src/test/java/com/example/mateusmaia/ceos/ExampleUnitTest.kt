@@ -1,4 +1,4 @@
-package com.example.mateusmaia.poccam
+package com.example.mateusmaia.ceos
 
 import org.junit.Test
 
