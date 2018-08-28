@@ -1,10 +1,10 @@
-package com.example.leviata.ceos
+package com.fiap.leviata.ceos
 
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.leviata.ceos.databinding.ActivityMainBinding
+import com.fiap.leviata.ceos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
