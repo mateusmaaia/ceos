@@ -1,4 +1,4 @@
-package com.fiap.leviata.ceos
+package leviata.ceos
 
 import org.junit.Test
 
