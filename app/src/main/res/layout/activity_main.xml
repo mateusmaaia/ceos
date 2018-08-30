@@ -13,7 +13,7 @@
             android:layout_height="0dp"
             android:background="@color/colorPrimaryDark"
             android:scaleType="centerCrop"
-            android:src=""
+            android:src="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -28,7 +28,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="@dimen/login_logo_margin_top"
             android:scaleType="centerCrop"
-            android:src=""
+            android:src="@drawable/ic_launcher_background"
             app:layout_constraintLeft_toLeftOf="@+id/username"
             app:layout_constraintRight_toRightOf="@+id/username"
             app:layout_constraintTop_toTopOf="@+id/img_login_background"
@@ -52,9 +52,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo"
-            app:setHintColor="#fff"
-            app:setTextColor="#fff"
-            app:setUnderlineColor="#fff" />
+             />
 
 
         <EditText
@@ -74,9 +72,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/username"
-            app:setHintColor="#fff"
-            app:setTextColor="#fff"
-            app:setUnderlineColor="#fff" />
+             />
 
         <TextView
             android:id="@+id/forgot_password"
@@ -95,7 +91,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password"
-            app:setTextColor="#fff" />
+             />
 
         <Button
             android:id="@+id/btnLogin"
@@ -115,8 +111,6 @@
             app:layout_constraintLeft_toLeftOf="@+id/username"
             app:layout_constraintRight_toRightOf="@+id/username"
             app:layout_constraintTop_toBottomOf="@+id/forgot_password"
-            app:setBackgroundColor="@android:color/black"
-            app:setTextColor="@{look.loginButtonText}"
             tools:textColor="@android:color/white" />
 
         <TextView
@@ -154,11 +148,11 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:setProgressBarIndeterminateColor="@{look.menuImportantItemText}" />
+            <!--<ProgressBar-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--app:setProgressBarIndeterminateColor="@{look.menuImportantItemText}" />-->
 
         </FrameLayout>
 
