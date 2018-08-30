@@ -2,11 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<data>
-    <variable
-        name="look"
-        type="leviata.ceos.Look" />
-</data>
+
+    <data>
+
+        <variable
+            name="look"
+            type="leviata.ceos.Look" />
+    </data>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,13 +20,13 @@
             android:layout_height="0dp"
             android:background="@color/colorPrimaryDark"
             android:scaleType="centerCrop"
+            app:backgroundColorScrim="@{look.backgroundColorScrim}"
+            app:backgroundGradientScrim="@{look.backgroundGradientScrim}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription"
-            app:backgroundColorScrim="@{look.backgroundColorScrim}"
-            app:backgroundGradientScrim="@{look.backgroundGradientScrim}"/>
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/logo"
@@ -52,13 +54,13 @@
             android:paddingLeft="12dp"
             android:paddingEnd="12dp"
             android:paddingRight="12dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             android:textSize="12sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo"
-            android:textColorHint="@android:color/white"
-            android:textColor="@android:color/white"
-            app:setUnderlineColor="@{look.color}"/>
+            app:setUnderlineColor="@{look.color}" />
 
         <EditText
             android:id="@+id/password"
@@ -73,15 +75,13 @@
             android:paddingLeft="14dp"
             android:paddingEnd="12dp"
             android:paddingRight="14dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             android:textSize="12sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/username"
-            android:textColorHint="@android:color/white"
-            android:textColor="@android:color/white"
-            app:setUnderlineColor="@{look.color}"/>
-
-
+            app:setUnderlineColor="@{look.color}" />
 
         <Button
             android:id="@+id/btnLogin"
@@ -97,11 +97,11 @@
             android:paddingRight="12dp"
             android:text="@string/login_enter_btn"
             android:textAllCaps="true"
+            android:textColor="@android:color/white"
             android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="@+id/username"
             app:layout_constraintRight_toRightOf="@+id/username"
-            app:layout_constraintTop_toBottomOf="@+id/password"
-            android:textColor="@android:color/white" />
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>
