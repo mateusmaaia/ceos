@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ceos</string>
     <string name="text">VAI BRAZIL</string>
+    <string name="login_field">Usuário</string>
+    <string name="login_password">Senha</string>
+    <string name="login_enter_btn">Entrar</string>
 </resources>
