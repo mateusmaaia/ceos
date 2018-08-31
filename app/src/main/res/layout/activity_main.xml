@@ -18,9 +18,9 @@
             android:id="@+id/img_login_background"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:scaleType="centerCrop"
             app:backgroundColorScrim="@{look.backgroundColorScrim}"
             app:backgroundGradientScrim="@{look.backgroundGradientScrim}"
-            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -37,6 +37,7 @@
             android:layout_marginTop="@dimen/login_logo_margin_top"
             android:layout_marginRight="8dp"
             android:scaleType="centerCrop"
+            android:visibility="invisible"
             app:layout_constraintLeft_toLeftOf="@+id/username"
             app:layout_constraintRight_toRightOf="@+id/username"
             app:layout_constraintTop_toTopOf="@+id/img_login_background"
@@ -110,8 +111,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/register_link"
-            android:textSize="14sp"
             android:textColorLink="@android:color/white"
+            android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="@+id/username"
             app:layout_constraintRight_toRightOf="@+id/forgotPassword"
             app:layout_constraintStart_toStartOf="@+id/btnLogin"
@@ -128,6 +129,7 @@
             app:layout_constraintEnd_toEndOf="@+id/btnLogin"
             app:layout_constraintLeft_toLeftOf="@+id/registerlink"
             app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
 
     </android.support.constraint.ConstraintLayout>
 </layout>
