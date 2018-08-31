@@ -18,15 +18,13 @@
             android:id="@+id/img_login_background"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:scaleType="centerCrop"
             app:backgroundColorScrim="@{look.backgroundColorScrim}"
             app:backgroundGradientScrim="@{look.backgroundGradientScrim}"
-            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             tools:ignore="ContentDescription" />
 
         <ImageView
@@ -57,10 +55,30 @@
             android:paddingRight="12dp"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
-            android:textSize="16sp"
+            android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:setUnderlineColor="@{look.color}" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/register_email"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingLeft="12dp"
+            android:paddingEnd="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username"
             app:setUnderlineColor="@{look.color}" />
 
         <EditText
@@ -78,10 +96,10 @@
             android:paddingRight="14dp"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
-            android:textSize="16sp"
+            android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username"
+            app:layout_constraintTop_toBottomOf="@+id/email"
             app:setUnderlineColor="@{look.color}" />
 
         <Button
@@ -89,7 +107,9 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_below="@+id/password"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
+            app:backgroundButtonColorScrim="@{look.backgroundButtonColorScrim}"
+            app:backgroundButtonGradientScrim="@{look.backgroundButtonGradientScrim}"
             android:paddingStart="12dp"
             android:paddingLeft="12dp"
             android:paddingEnd="12dp"
@@ -98,36 +118,9 @@
             android:textAllCaps="true"
             android:textColor="@android:color/white"
             android:textSize="14sp"
-            app:backgroundButtonColorScrim="@{look.backgroundButtonColorScrim}"
-            app:backgroundButtonGradientScrim="@{look.backgroundButtonGradientScrim}"
             app:layout_constraintLeft_toLeftOf="@+id/username"
             app:layout_constraintRight_toRightOf="@+id/username"
             app:layout_constraintTop_toBottomOf="@+id/password" />
-
-        <TextView
-            android:id="@+id/registerlink"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/register_link"
-            android:textSize="14sp"
-            android:textColorLink="@android:color/white"
-            app:layout_constraintLeft_toLeftOf="@+id/username"
-            app:layout_constraintRight_toRightOf="@+id/forgotPassword"
-            app:layout_constraintStart_toStartOf="@+id/btnLogin"
-            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
-        <TextView
-            android:id="@+id/forgotPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/forget_password"
-            android:textColorLink="@android:color/white"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/btnLogin"
-            app:layout_constraintLeft_toLeftOf="@+id/registerlink"
-            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>
