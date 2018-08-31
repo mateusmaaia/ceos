@@ -1,5 +1,6 @@
 package leviata.ceos
 
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -29,5 +30,10 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+
+        binding.registerlink.setOnClickListener{
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
+
     }
 }
