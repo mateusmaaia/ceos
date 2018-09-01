@@ -11,7 +11,6 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import leviata.ceos.databinding.ActivityMainBinding
-
 class MainActivity : AppCompatActivity() {
 
     var count = 0
@@ -22,21 +21,26 @@ class MainActivity : AppCompatActivity() {
         binding.look = Look()
         val handler = Handler()
 
-
+        setImageLogo(getDrawable(R.drawable.androidlogo), binding.logo)
+        binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
 
         binding.btnLogin.setOnClickListener {
             count++
 
-            if (count == 3) {
+            if (count == 13) {
                 setImageLogo(getDrawable(R.drawable.mind), binding.logo)
                 Toast.makeText(this, "SHAZAM", Toast.LENGTH_LONG).show()
                 binding.logo.visibility = View.VISIBLE
+                count = 0
                 binding.logo.startAnimation(R.anim.fade_in) {
                     handler.postDelayed({
                         binding.logo.visibility = View.INVISIBLE
+                        setImageLogo(getDrawable(R.drawable.androidlogo), binding.logo)
+                        binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
                     }, 2000)
 
                 }
+
             }
 
         }
@@ -57,4 +61,6 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         count = 0
     }
+
 }
+
