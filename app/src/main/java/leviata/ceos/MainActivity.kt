@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
 
+        binding.forgotPassword.setOnClickListener {
+            startActivity(Intent(this, ForgotPassword::class.java))
+        }
+
     }
 
     fun setImageLogo(d: Drawable, i: ImageView) {
