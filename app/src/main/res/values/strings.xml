@@ -4,6 +4,7 @@
     <string name="login_password">Senha</string>
     <string name="register_email">E-mail</string>
     <string name="login_enter_btn">Entrar</string>
+    <string name="register_enter_btn">Cadastrar</string>
     <string name="confirm_email">Digite seu e-mail</string>
     <string name="forgot_password_btn">Enviar</string>
     <string name="forgot_password">
