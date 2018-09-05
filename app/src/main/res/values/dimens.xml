@@ -28,8 +28,13 @@
 <dimen name="bottom_navigation_small_margin_top" tools:override="true">0dp</dimen>
 <dimen name="bottom_navigation_small_margin_top_active" tools:override="true">0dp</dimen>
 
+<!-- Text size -->
+<dimen name="default_text_size">16sp</dimen>
+
 <!-- Qrcode CheckiN -->
 <dimen name="checkin_dialog_width">300dp</dimen>
 <dimen name="progress_dialog_height">150dp</dimen>
+
+
 
 </resources>
