@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.forgotPassword.setOnClickListener {
-            startActivity(Intent(this, ForgotPassword::class.java))
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
 
     }
