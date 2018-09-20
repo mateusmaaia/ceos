@@ -42,8 +42,10 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
+            startActivity(Intent(this, HomeActivity::class.java))
 
         }
+
 
         binding.registerlink.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
