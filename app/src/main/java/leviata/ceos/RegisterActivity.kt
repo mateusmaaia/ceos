@@ -13,6 +13,7 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         val binding = DataBindingUtil.setContentView<ActivityRegisterBinding>(this, R.layout.activity_register)
         binding.look = Look()
 
