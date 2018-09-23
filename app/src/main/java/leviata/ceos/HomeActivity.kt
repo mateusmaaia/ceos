@@ -25,14 +25,31 @@ class HomeActivity : AppCompatActivity() {
     /*- On Options Item Selected --------------------------------------------------------- */
     // One of the toolbar icons was clicked
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here.
-        val id = item.getItemId()
 
-        if (id == R.id.navigationMenu) {
-            val i = Intent(this@HomeActivity, HomeActivity::class.java)
-            startActivity(i)
-            finish()
+        val selectedItem = item!!.itemId
+
+        when(selectedItem){
+
+            R.id.magenta->{
+
+            }
+
+            R.id.yellow->{
+
+            }
+
+            R.id.red->{
+
+            }
+            R.id.green->{
+
+            }
+            R.id.blue->{
+
+            }
         }
+
+
         return super.onOptionsItemSelected(item)
     }
 

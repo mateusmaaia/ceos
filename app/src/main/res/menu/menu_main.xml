@@ -3,9 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigationMenu"
-        android:icon="@drawable/ic_menu_icon"
-        android:title="menu"
-        app:showAsAction="always" />
+        android:id="@+id/magenta"
+        android:title="Magenta" />
+    <item
+        android:id="@+id/yellow"
+        android:title="Yellow" />
+
+
+    <item
+        android:id="@+id/red"
+        android:title="Red" />
+    <item
+        android:id="@+id/blue"
+        android:title="Blue" />
+    <item
+        android:id="@+id/green"
+        android:title="green" />
+
 
 </menu>
