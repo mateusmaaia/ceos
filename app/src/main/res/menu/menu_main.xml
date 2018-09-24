@@ -3,22 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/magenta"
-        android:title="Magenta" />
+        android:id="@+id/perfil"
+        android:title="Perfil" />
     <item
-        android:id="@+id/yellow"
-        android:title="Yellow" />
-
-
+        android:id="@+id/criar_desafio"
+        android:title="Criar Desafio" />
     <item
-        android:id="@+id/red"
-        android:title="Red" />
+        android:id="@+id/grupos"
+        android:title="Meus Grupos" />
     <item
-        android:id="@+id/blue"
-        android:title="Blue" />
+        android:id="@+id/ranking_geral"
+        android:title="Ranking geral" />
     <item
-        android:id="@+id/green"
-        android:title="green" />
+        android:id="@+id/logout"
+        android:title="Logout" />
 
 
 </menu>
