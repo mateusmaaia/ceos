@@ -1,11 +1,10 @@
 package leviata.ceos
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.view.MenuInflater
-import android.widget.Toast
 
 
 open class MenuFragment : AppCompatActivity() {
@@ -26,7 +25,7 @@ open class MenuFragment : AppCompatActivity() {
         when(selectedItem){
 
             R.id.perfil->{
-                Toast.makeText(this, "lil loiro", Toast.LENGTH_SHORT).show();
+                startActivity(Intent(this, ProfileActivity::class.java))
                 return true
             }
 
