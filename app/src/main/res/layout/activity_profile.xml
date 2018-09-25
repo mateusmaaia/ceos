@@ -37,11 +37,13 @@
                         android:background="@color/colorPrimaryDark"
                         android:orientation="vertical">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="45dp"
+                            android:scaleType="centerCrop"
+                            android:layout_centerHorizontal="true"
                             android:src="@drawable/avatar" />
 
                         <TextView
@@ -49,7 +51,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="10dp"
-                            android:text="Wiliam Snoe"
+                            android:text="@string/username"
                             android:textColor="#fff"
                             android:textSize="21sp"
                             android:textStyle="bold" />

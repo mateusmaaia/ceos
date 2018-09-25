@@ -12,4 +12,5 @@ class HomeActivity : MenuFragment() {
         binding.look = Look()
     }
 
+
 }
