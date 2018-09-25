@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".login.register.RegisterActivity"/>
         <activity android:name=".MainActivity"/>
-        <activity android:name=".ForgotPasswordActivity"/>
+        <activity android:name=".login.register.ForgotPasswordActivity"/>
         <activity android:name=".HomeActivity"/>
         <activity android:name=".MenuFragment"/>
-        <activity android:name=".ProfileActivity"/>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".ProfileFragment"/>
+        <activity android:name=".navigation.NavigationActivity"/>
+        <activity android:name=".login.register.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

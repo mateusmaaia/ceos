@@ -1,4 +1,4 @@
-package leviata.ceos
+package leviata.ceos.util
 
 class Look {
 

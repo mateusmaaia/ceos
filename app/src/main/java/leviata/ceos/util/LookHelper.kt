@@ -1,4 +1,4 @@
-package leviata.ceos
+package leviata.ceos.util
 
 import android.databinding.BindingAdapter
 import android.graphics.Color
