@@ -7,7 +7,7 @@
 
         <variable
             name="look"
-            type="leviata.ceos.Look" />
+            type="leviata.ceos.util.Look" />
     </data>
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"

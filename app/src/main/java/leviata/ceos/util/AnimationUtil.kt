@@ -1,4 +1,4 @@
-package leviata.ceos
+package leviata.ceos.util
 
 import android.support.annotation.AnimRes
 import android.view.View

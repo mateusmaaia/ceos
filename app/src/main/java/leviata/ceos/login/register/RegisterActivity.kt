@@ -1,4 +1,4 @@
-package leviata.ceos
+package leviata.ceos.login.register
 
 import android.databinding.DataBindingUtil
 import android.graphics.drawable.Drawable
@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import leviata.ceos.R
 import leviata.ceos.databinding.ActivityRegisterBinding
+import leviata.ceos.util.Look
 
 class RegisterActivity : AppCompatActivity() {
 

@@ -11,6 +11,12 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import leviata.ceos.databinding.ActivityMainBinding
+import leviata.ceos.login.register.ForgotPasswordActivity
+import leviata.ceos.login.register.RegisterActivity
+import leviata.ceos.navigation.NavigationActivity
+import leviata.ceos.util.Look
+import leviata.ceos.util.startAnimation
+
 class MainActivity : AppCompatActivity() {
 
     var count = 0
@@ -43,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, NavigationActivity::class.java))
 
         }
 
