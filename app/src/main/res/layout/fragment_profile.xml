@@ -13,9 +13,11 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -56,9 +58,9 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="350dp"
                         android:layout_height="120dp"
-                        app:cardElevation="40dp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="275dp">
+                        android:layout_marginTop="275dp"
+                        app:cardElevation="40dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -143,68 +145,68 @@
                     <android.support.v7.widget.GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:columnCount="2"
-                        app:rowCount="4"
-                        android:paddingStart="8dp"
-                        android:paddingLeft="8dp"
+                        android:paddingBottom="20dp"
                         android:paddingEnd="8dp"
+                        android:paddingLeft="8dp"
                         android:paddingRight="8dp"
+                        android:paddingStart="8dp"
                         android:paddingTop="8dp"
-                        android:paddingBottom="20dp">
+                        app:columnCount="2"
+                        app:rowCount="4">
 
                         <!-- Row 1-->
                         <ImageView
                             android:id="@+id/star"
                             android:src="@drawable/ic_star_icon"
-                            app:layout_columnWeight="1"/>
+                            app:layout_columnWeight="1" />
 
                         <ImageView
                             android:id="@+id/cloud"
                             android:src="@drawable/ic_cloud_icon"
-                            app:layout_columnWeight="1"/>
+                            app:layout_columnWeight="1" />
 
                         <!-- Row 2 -->
                         <TextView
-                            app:layout_gravity="center_horizontal"
-                            android:text="Responder um Desafio"
                             android:layout_marginTop="15dp"
+                            android:text="Responder um Desafio"
                             android:textColor="@color/whiteStyle"
-                            android:textSize="@dimen/default_text_size" />
+                            android:textSize="@dimen/default_text_size"
+                            app:layout_gravity="center_horizontal" />
 
                         <TextView
-                            app:layout_gravity="center_horizontal"
-                            android:text="Publicar um Desafio"
                             android:layout_marginTop="15dp"
+                            android:text="Publicar um Desafio"
                             android:textColor="@color/whiteStyle"
-                            android:textSize="@dimen/default_text_size"/>
+                            android:textSize="@dimen/default_text_size"
+                            app:layout_gravity="center_horizontal" />
 
                         <!-- Row 3 -->
                         <ImageView
                             android:id="@+id/search_badge"
                             android:layout_marginTop="45dp"
-                            app:layout_columnWeight="1"
-                            android:src="@drawable/ic_search_icon"/>
+                            android:src="@drawable/ic_search_icon"
+                            app:layout_columnWeight="1" />
 
                         <ImageView
                             android:id="@+id/precision"
                             android:layout_marginTop="45dp"
-                            app:layout_columnWeight="1"
-                            android:src="@drawable/ic_precision_icon"/>
+                            android:src="@drawable/ic_precision_icon"
+                            app:layout_columnWeight="1" />
 
                         <!-- Row 4 -->
                         <TextView
-                            app:layout_gravity="center_horizontal"
-                            android:text="Períto em Desafios"
                             android:layout_marginTop="15dp"
+                            android:text="Períto em Desafios"
                             android:textColor="@color/whiteStyle"
-                            android:textSize="@dimen/default_text_size"/>
+                            android:textSize="@dimen/default_text_size"
+                            app:layout_gravity="center_horizontal" />
 
                         <TextView
-                            app:layout_gravity="center_horizontal"
-                            android:text="100 Desafios Completos"
                             android:layout_marginTop="15dp"
+                            android:text="100 Desafios Completos"
                             android:textColor="@color/whiteStyle"
-                            android:textSize="@dimen/default_text_size"/>
+                            android:textSize="@dimen/default_text_size"
+                            app:layout_gravity="center_horizontal" />
 
                     </android.support.v7.widget.GridLayout>
                 </LinearLayout>
