@@ -33,11 +33,12 @@ class NavigationPresenter(private val mActivity: NavigationActivity, private val
         }
 
         when (itemIdValue) {
+            NavigationActivity.HOME_ID -> replaceFragment(HomeFragment())
             NavigationActivity.PERFIL_ID -> replaceFragment(ProfileFragment())
 //            NavigationActivity.CRIAR_DESAFIO_ID -> replaceFragment(ChallengesFragment())
 //            NavigationActivity.GRUPOS_ID -> replaceFragment(GroupsFragment())
 //            NavigationActivity.RANKING_GERAL_ID -> replaceFragment(RankingFragment())
-//            NavigationActivity.LOGOUT_ID -> Logout()
+//            NavigationActivity.LOGOUT_ID -> replaceFragment(Logout())
 
         }
 

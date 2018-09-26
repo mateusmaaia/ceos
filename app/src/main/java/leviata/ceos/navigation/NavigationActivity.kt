@@ -43,6 +43,7 @@ class NavigationActivity : AppCompatActivity() {
 
         for ((index, title) in titles.withIndex()) {
             when (title) {
+                NavigationActivity.HOME -> inflateMenuItem(menu, title, icons.getResourceId(index, -1), NavigationActivity.HOME_ID)
                 NavigationActivity.PERFIL -> inflateMenuItem(menu, title, icons.getResourceId(index, -1), NavigationActivity.PERFIL_ID)
                 NavigationActivity.CRIAR_DESAFIO -> inflateMenuItem(menu, title, icons.getResourceId(index, -1), NavigationActivity.CRIAR_DESAFIO_ID)
                 NavigationActivity.GRUPOS -> inflateMenuItem(menu, title, icons.getResourceId(index, -1), NavigationActivity.GRUPOS_ID)
@@ -58,16 +59,18 @@ class NavigationActivity : AppCompatActivity() {
     }
 
     companion object {
+        const val HOME = "HOME"
         const val PERFIL = "PERFIL"
         const val CRIAR_DESAFIO = "CRIAR_DESAFIO"
         const val GRUPOS = "GRUPOS"
         const val RANKING_GERAL = "RANKING_GERAL"
         const val LOGOUT = "LOGOUT"
 
-        const val PERFIL_ID = 0
-        const val CRIAR_DESAFIO_ID = 1
-        const val GRUPOS_ID = 2
-        const val RANKING_GERAL_ID = 3
-        const val LOGOUT_ID = 4
+        const val HOME_ID = 0
+        const val PERFIL_ID = 1
+        const val CRIAR_DESAFIO_ID = 2
+        const val GRUPOS_ID = 3
+        const val RANKING_GERAL_ID = 4
+        const val LOGOUT_ID = 5
     }
 }
