@@ -120,25 +120,93 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="196dp"
+                    android:layout_height="400dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimaryDark"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:paddingLeft="25dp">
+                        android:layout_height="80dp">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:text="Ultimos desafios"
+                            android:text="Conquistas"
+                            android:textAlignment="center"
                             android:textColor="@color/whiteStyle"
                             android:textSize="@dimen/default_title_size"
                             android:textStyle="bold" />
                     </LinearLayout>
+
+                    <android.support.v7.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2"
+                        app:rowCount="4"
+                        android:paddingStart="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="20dp">
+
+                        <!-- Row 1-->
+                        <ImageView
+                            android:id="@+id/star"
+                            android:src="@drawable/ic_star_icon"
+                            app:layout_columnWeight="1"/>
+
+                        <ImageView
+                            android:id="@+id/cloud"
+                            android:src="@drawable/ic_cloud_icon"
+                            app:layout_columnWeight="1"/>
+
+                        <!-- Row 2 -->
+                        <TextView
+                            app:layout_gravity="center_horizontal"
+                            android:text="Responder um Desafio"
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/whiteStyle"
+                            android:textSize="@dimen/default_text_size" />
+
+                        <TextView
+                            app:layout_gravity="center_horizontal"
+                            android:text="Publicar um Desafio"
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/whiteStyle"
+                            android:textSize="@dimen/default_text_size"/>
+
+                        <!-- Row 3 -->
+                        <ImageView
+                            android:id="@+id/search_badge"
+                            android:layout_marginTop="45dp"
+                            app:layout_columnWeight="1"
+                            android:src="@drawable/ic_search_icon"/>
+
+                        <ImageView
+                            android:id="@+id/precision"
+                            android:layout_marginTop="45dp"
+                            app:layout_columnWeight="1"
+                            android:src="@drawable/ic_precision_icon"/>
+
+                        <!-- Row 4 -->
+                        <TextView
+                            app:layout_gravity="center_horizontal"
+                            android:text="Períto em Desafios"
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/whiteStyle"
+                            android:textSize="@dimen/default_text_size"/>
+
+                        <TextView
+                            app:layout_gravity="center_horizontal"
+                            android:text="100 Desafios Completos"
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/whiteStyle"
+                            android:textSize="@dimen/default_text_size"/>
+
+                    </android.support.v7.widget.GridLayout>
                 </LinearLayout>
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
