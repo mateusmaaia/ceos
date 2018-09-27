@@ -12,9 +12,6 @@
         <activity android:name=".login.register.RegisterActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".login.register.ForgotPasswordActivity"/>
-        <activity android:name=".HomeActivity"/>
-        <activity android:name=".MenuFragment"/>
-        <activity android:name=".ProfileFragment"/>
         <activity android:name=".navigation.NavigationActivity"/>
         <activity android:name=".login.register.SplashActivity">
             <intent-filter>
