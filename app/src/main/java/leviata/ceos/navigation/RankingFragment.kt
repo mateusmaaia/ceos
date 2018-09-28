@@ -1,4 +1,4 @@
-package leviata.ceos
+package leviata.ceos.navigation
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import leviata.ceos.R
+import leviata.ceos.RankingRecyclerViewAdapter
 import leviata.ceos.databinding.FragmentRankingBinding
 
 
@@ -30,16 +32,17 @@ class RankingFragment : Fragment() {
 
     private fun setUpRecyclerView(binding: FragmentRankingBinding) {
         binding.recyclerRanking.setHasFixedSize(true)
-        val linearLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        val linearLayoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.recyclerRanking.layoutManager = linearLayoutManager
     }
 
     private fun populateRecyclerView() {
 
-        var users_array = arrayListOf("Wilson Oliveira", "Dário Augusto", "Sabrina Vieira", "Willian Sone", "Marcos Hon-ma", "Valéria Maia", "Fernanda Garcia")
-        var scores_array = arrayListOf("152", "139", "130", "125", "112", "100", "79")
+        var usersArray = arrayListOf("Wilson Oliveira", "Dário Augusto", "Sabrina Vieira", "Willian Sone", "Marcos Hon-ma", "Valéria Maia", "Fernanda Garcia")
+        var scoresArray = arrayListOf("152", "139", "130", "125", "112", "100", "79")
+        var rankingPositions = arrayListOf("1","2", "3", "4", "5", "6", "7")
         val cont = context ?: return
-        val adapter = RankingRecyclerViewAdapter(users_array, scores_array, cont)
+        val adapter = RankingRecyclerViewAdapter(rankingPositions, usersArray, scoresArray, cont)
         binding.recyclerRanking.adapter = adapter
     }
 
