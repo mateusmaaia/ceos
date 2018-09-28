@@ -8,17 +8,18 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_ranking.view.*
 
 
-class RankingRecyclerViewAdapter(val users : ArrayList<String>, val scores : ArrayList<String>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class RankingRecyclerViewAdapter(val users: ArrayList<String>, val scores: ArrayList<String>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.fragment_ranking, parent, false))
-    }
 
-    override fun onBindViewHolder(holder: RankingHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.user.text = users[position]
         holder.score.text = scores[position]
-
     }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_ranking, parent, false))
+    }
+
 
     override fun getItemCount(): Int {
         return users.size
@@ -27,7 +28,7 @@ class RankingRecyclerViewAdapter(val users : ArrayList<String>, val scores : Arr
 
 }
 
-class RankingHolder (view: View) : RecyclerView.ViewHolder(view) {
+class RankingHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     val user = view.name_ranking
     val score = view.scores

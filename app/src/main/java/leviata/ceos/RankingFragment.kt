@@ -29,9 +29,9 @@ class RankingFragment : Fragment() {
     }
 
     private fun setUpRecyclerView(binding: FragmentRankingBinding) {
-        binding.recyclerHome.setHasFixedSize(true)
+        binding.recyclerRanking.setHasFixedSize(true)
         val linearLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        binding.recyclerHome.layoutManager = linearLayoutManager
+        binding.recyclerRanking.layoutManager = linearLayoutManager
     }
 
     private fun populateRecyclerView() {
