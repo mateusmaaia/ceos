@@ -39,7 +39,8 @@ class HomeFragment : Fragment() {
     private fun populateRecyclerView() {
 
         val cont = context ?: return
-        val adapter = SectionRecyclerViewAdapter(arrayListOf("1", "2", "3", "5", "7"), cont)
+        val adapter = SectionRecyclerViewAdapter(arrayListOf("Array", "Enum", "String", "Condicionais"), cont)
         binding.recyclerHome.adapter = adapter
+        binding.recyclerLabel.text = "Tecnologia"
     }
 }

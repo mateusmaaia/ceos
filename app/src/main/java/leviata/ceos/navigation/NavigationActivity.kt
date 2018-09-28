@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import android.view.Gravity
 import android.view.Menu
 import leviata.ceos.R
 import leviata.ceos.databinding.ActivityNavigationBinding
@@ -23,6 +24,12 @@ class NavigationActivity : AppCompatActivity() {
         this.binding = binding
         val presenter = NavigationPresenter(this, binding)
         this.presenter = presenter
+
+        binding.toolbar.setTitle(R.string.app_name)
+        binding.toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp)
+        binding.toolbar.setNavigationOnClickListener {
+            binding.drawerLayout.openDrawer(Gravity.START)
+        }
 
         val ctx = applicationContext
         val res = ctx.resources

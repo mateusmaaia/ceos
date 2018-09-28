@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ceos</string>
+    <string name="app_name">Ceos</string>
     <string name="login_field">Usuário</string>
     <string name="login_password">Senha</string>
     <string name="register_email">E-mail</string>
