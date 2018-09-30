@@ -168,14 +168,14 @@
                         <!-- Row 2 -->
                         <TextView
                             android:layout_marginTop="15dp"
-                            android:text="Responder um Desafio"
+                            android:text="@string/badge_answer"
                             android:textColor="@color/whiteStyle"
                             android:textSize="@dimen/default_text_size"
                             app:layout_gravity="center_horizontal" />
 
                         <TextView
                             android:layout_marginTop="15dp"
-                            android:text="Publicar um Desafio"
+                            android:text="@string/badge_publish"
                             android:textColor="@color/whiteStyle"
                             android:textSize="@dimen/default_text_size"
                             app:layout_gravity="center_horizontal" />
@@ -196,14 +196,14 @@
                         <!-- Row 4 -->
                         <TextView
                             android:layout_marginTop="15dp"
-                            android:text="Períto em Desafios"
+                            android:text="@string/badge_expert"
                             android:textColor="@color/whiteStyle"
                             android:textSize="@dimen/default_text_size"
                             app:layout_gravity="center_horizontal" />
 
                         <TextView
                             android:layout_marginTop="15dp"
-                            android:text="100 Desafios Completos"
+                            android:text="@string/badge_100_challenges"
                             android:textColor="@color/whiteStyle"
                             android:textSize="@dimen/default_text_size"
                             app:layout_gravity="center_horizontal" />

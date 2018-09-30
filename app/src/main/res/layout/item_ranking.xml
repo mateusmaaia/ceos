@@ -35,7 +35,7 @@
         android:layout_height="40dp"
         android:background="@color/whiteStyle"
         android:gravity="center"
-        android:textColor="#00AF7A"
+        android:textColor="@color/attentionColor"
         app:layout_constraintLeft_toRightOf="@+id/userNameRanking"
         app:layout_constraintRight_toRightOf="parent"/>
 

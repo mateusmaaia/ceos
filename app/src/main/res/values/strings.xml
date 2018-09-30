@@ -14,4 +14,9 @@
     <string name="register_link">
         <a href="">Registrar-se</a>
     </string>
+    <string name="ranking_title">Ranking Geral</string>
+    <string name="badge_answer">Responder um Desafio</string>
+    <string name="badge_publish">Publicar um Desafio</string>
+    <string name="badge_expert">Períto em Desafios</string>
+    <string name="badge_100_challenges">100 Desafios Completos</string>
 </resources>
