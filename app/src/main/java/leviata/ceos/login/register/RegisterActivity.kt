@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityRegisterBinding>(this, R.layout.activity_register)
         binding.look = Look()
 
-        setImageLogo(getDrawable(R.drawable.logo), binding.logo)
+        setImageLogo(getDrawable(R.drawable.ceos), binding.logo)
         binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
 
     }
