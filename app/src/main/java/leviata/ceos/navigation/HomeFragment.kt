@@ -31,16 +31,26 @@ class HomeFragment : Fragment() {
     }
 
     private fun setUpRecyclerView(binding: FragmentHomeBinding) {
-        binding.recyclerHome.setHasFixedSize(true)
+        binding.recyclerHomeTec.setHasFixedSize(true)
         val linearLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        binding.recyclerHome.layoutManager = linearLayoutManager
+        binding.recyclerHomeTec.layoutManager = linearLayoutManager
+
+        binding.recyclerHomeMat.setHasFixedSize(true)
+        val linearLayoutManager2 = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.recyclerHomeMat.layoutManager = linearLayoutManager2
+
+
     }
 
     private fun populateRecyclerView() {
 
         val cont = context ?: return
         val adapter = SectionRecyclerViewAdapter(arrayListOf("Array", "Enum", "String", "Condicionais"), cont)
-        binding.recyclerHome.adapter = adapter
-        binding.recyclerLabel.text = "Tecnologia"
+        binding.recyclerHomeTec.adapter = adapter
+        binding.recyclerHomeTec.text = "Tecnologia"
+
+        val adapter2 = SectionRecyclerViewAdapter(arrayListOf("Integral", "Derivada", "Teorema de LaPlace", "Logaritmos"), cont)
+        binding.recyclerHomeTec.adapter = adapter2
+        binding.recyclerHomeTec.text = "Matemática"
     }
 }

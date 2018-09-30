@@ -26,17 +26,37 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/recyclerLabel"
+                        android:id="@+id/recyclerLabelTec"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_marginLeft="5sp"
+                        android:textColor="#000"
                         android:textSize="20sp" />
 
                     <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recyclerHome"
+                        android:id="@+id/recyclerHomeTec"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabel" />
+                        android:layout_marginLeft="5sp"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabelTec" />
+
+
+                    <TextView
+                        android:id="@+id/recyclerLabelMat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="10sp"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerHomeTec" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerHomeMat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabelMat" />
                 </android.support.constraint.ConstraintLayout>
 
             </android.support.v4.widget.NestedScrollView>
