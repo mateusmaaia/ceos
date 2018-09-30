@@ -47,10 +47,10 @@ class HomeFragment : Fragment() {
         val cont = context ?: return
         val adapter = SectionRecyclerViewAdapter(arrayListOf("Array", "Enum", "String", "Condicionais"), cont)
         binding.recyclerHomeTec.adapter = adapter
-        binding.recyclerHomeTec.text = "Tecnologia"
+        binding.recyclerLabelTec.text = "Tecnologia"
 
         val adapter2 = SectionRecyclerViewAdapter(arrayListOf("Integral", "Derivada", "Teorema de LaPlace", "Logaritmos"), cont)
         binding.recyclerHomeTec.adapter = adapter2
-        binding.recyclerHomeTec.text = "Matemática"
+        binding.recyclerLabelMat.text = "Matemática"
     }
 }
