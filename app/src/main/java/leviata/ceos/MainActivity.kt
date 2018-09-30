@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding.look = Look()
         val handler = Handler()
 
-        setImageLogo(getDrawable(R.drawable.logo), binding.logo)
+        setImageLogo(getDrawable(R.drawable.ceos), binding.logo)
         binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
 
         binding.btnLogin.setOnClickListener {
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 binding.logo.startAnimation(R.anim.fade_in) {
                     handler.postDelayed({
                         binding.logo.visibility = View.INVISIBLE
-                        setImageLogo(getDrawable(R.drawable.logo), binding.logo)
+                        setImageLogo(getDrawable(R.drawable.ceos), binding.logo)
                         binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
                     }, 2000)
 

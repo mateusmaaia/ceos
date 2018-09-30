@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivitySplashBinding>(this, R.layout.activity_splash)
         binding.look = Look()
 
-        setImageLogo(getDrawable(R.drawable.logo), binding.logo)
+        setImageLogo(getDrawable(R.drawable.ceos), binding.logo)
 
         Handler().postDelayed({
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
