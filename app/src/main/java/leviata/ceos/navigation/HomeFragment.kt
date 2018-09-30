@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
         binding.recyclerLabelTec.text = "Tecnologia"
 
         val adapter2 = SectionRecyclerViewAdapter(arrayListOf("Integral", "Derivada", "Teorema de LaPlace", "Logaritmos"), cont)
-        binding.recyclerHomeTec.adapter = adapter2
+        binding.recyclerHomeMat.adapter = adapter2
         binding.recyclerLabelMat.text = "Matemática"
     }
 }
