@@ -5,7 +5,8 @@
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -30,10 +31,7 @@
                 android:background="@color/whiteStyle"
                 android:elevation="10dp"
                 android:padding="15dp"
-                android:text="As equações de 2º grau podem ter até duas raízes reais. O número de raízes de uma equação do 2º grau irá depender do valor do delta:
-- Nenhuma raiz real: quando delta for menor que zero.
-- Uma única raiz real: quando delta for igual a zero
-- Duas raízes reais: quando delta for maior que zero."
+                android:text="As equações de 2º grau podem ter até duas raízes reais. O número de raízes de uma equação do 2º grau irá depender do valor do delta: Nenhuma raiz real: quando delta for menor que zero. Uma única raiz real: quando delta for igual a zero.Duas raízes reais: quando delta for maior que zero."
                 android:textColor="@color/colorSecondary"
                 android:textSize="@dimen/default_text_size"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -48,7 +46,7 @@
                 android:background="@color/whiteStyle"
                 android:elevation="100dp"
                 android:padding="15dp"
-                android:text="João recebeu uma carta de seu tio para ir ao jardim de sua casa, chegando lá João percebeu que tinha um presente fechado com um cadeado ao lado de uma árvore e uma outra carta. Ao abri-la estava escrito 'veja essa árvore meu querido, as junções de suas raízes são muito importantes para o seu crescimento, deixei um presente pra ti, basta você descobrir a senha' e logo abaixo tinha a seguinte equação:x^2-14x+48=0. Ajude João a abrir o presente, qual é a senha?"
+                android:text="João recebeu uma carta de seu tio para ir ao jardim de sua casa, chegando lá João percebeu que tinha um presente fechado com um cadeado ao lado de uma árvore e uma outra carta. Ao abri-la estava escrito 'veja essa árvore meu querido, as junções de suas raízes são muito importantes para o seu crescimento, deixei um presente pra ti, basta você descobrir a senha' e logo abaixo tinha a seguinte equação:x^2-14x+48=0. Qual é a senha? Ajude João a abrir o presente"
                 android:textColor="@color/colorSecondary"
                 android:textSize="@dimen/default_text_size"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -56,79 +54,71 @@
                 app:layout_constraintTop_toBottomOf="@+id/summary_challenge" />
 
 
-                <RadioGroup
-                    android:id="@+id/radio_question"
+            <RadioGroup
+                android:id="@+id/radio_question"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/challenge_question">
+
+                <RadioButton
+                    android:id="@+id/radioFirst"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/challenge_question">
+                    android:layout_marginBottom="10dp"
+                    android:buttonTint="@color/colorPrimary"
+                    android:checked="true"
+                    android:padding="5dp"
+                    android:text="a) 12"
+                    android:textColor="#000" />
 
-                    <RadioButton
-                        android:id="@+id/radioFirst"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:text="a) 12"
-                        android:textColor="@color/colorAccent"
-                        android:buttonTint="@color/colorPrimary"
-                        android:background="@color/whiteStyle"
-                        android:elevation="1dp"
-                        android:layout_marginBottom="10dp"
-                        android:padding="5dp"
-                        android:checked="true" />
-
-                    <RadioButton
-                        android:id="@+id/radioSecond"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorAccent"
-                        android:buttonTint="@color/colorPrimary"
-                        android:background="@color/whiteStyle"
-                        android:layout_marginBottom="10dp"
-                        android:elevation="1dp"
-                        android:padding="5dp"
-                        android:text="b) 10" />
-
-                    <RadioButton
-                        android:id="@+id/radioThird"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorAccent"
-                        android:buttonTint="@color/colorPrimary"
-                        android:background="@color/whiteStyle"
-                        android:elevation="1dp"
-                        android:layout_marginBottom="10dp"
-                        android:padding="5dp"
-                        android:text="c) 14" />
-
-                    <RadioButton
-                        android:id="@+id/radioFourth"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorAccent"
-                        android:buttonTint="@color/colorPrimary"
-                        android:background="@color/whiteStyle"
-                        android:elevation="1dp"
-                        android:layout_marginBottom="10dp"
-                        android:padding="5dp"
-                        android:text="d) 15" />
-
-                </RadioGroup>
-
-                <Button
-                    android:id="@+id/btn_display"
-                    android:layout_width="wrap_content"
+                <RadioButton
+                    android:id="@+id/radioSecond"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/radio_question"
-                    android:layout_marginTop="10dp"
-                    android:elevation="1dp"
-                    android:background="@color/whiteStyle"
-                    android:textColor="@color/colorPrimary"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:text="Enviar" />
+                    android:layout_marginBottom="10dp"
+                    android:buttonTint="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="b) 10"
+                    android:textColor="#000" />
+
+                <RadioButton
+                    android:id="@+id/radioThird"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:buttonTint="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="c) 14"
+                    android:textColor="#000" />
+
+                <RadioButton
+                    android:id="@+id/radioFourth"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:buttonTint="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="d) 15"
+                    android:textColor="#000" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_display"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:elevation="5dp"
+                android:text="Enviar"
+                android:textColor="@color/whiteStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio_question" />
 
         </android.support.constraint.ConstraintLayout>
 
