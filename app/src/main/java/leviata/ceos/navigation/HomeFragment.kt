@@ -45,12 +45,18 @@ class HomeFragment : Fragment() {
     private fun populateRecyclerView() {
 
         val cont = context ?: return
-        val adapter = SectionRecyclerViewAdapter(arrayListOf("Array", "Enum", "String", "Condicionais"), cont)
+        val adapter = SectionRecyclerViewAdapter(arrayListOf("Array", "Enum", "String", "Condicionais"), cont){
+            (activity as NavigationActivity).presenter.replaceFragment(RankingFragment())
+        }
         binding.recyclerHomeTec.adapter = adapter
         binding.recyclerLabelTec.text = "Tecnologia"
 
-        val adapter2 = SectionRecyclerViewAdapter(arrayListOf("Integral", "Derivada", "Teorema de LaPlace", "Logaritmos"), cont)
+        val adapter2 = SectionRecyclerViewAdapter(arrayListOf("Integral", "Derivada", "Teorema de LaPlace", "Logaritmos"), cont){
+
+        }
         binding.recyclerHomeMat.adapter = adapter2
         binding.recyclerLabelMat.text = "Matemática"
+
+
     }
 }

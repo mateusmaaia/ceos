@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item.view.*
 
 
-class SectionRecyclerViewAdapter(private val items : ArrayList<String>, private val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class SectionRecyclerViewAdapter(private val items : ArrayList<String>, private val context: Context, val listener: (String) -> Unit) : RecyclerView.Adapter<ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item, parent, false))
@@ -16,6 +16,9 @@ class SectionRecyclerViewAdapter(private val items : ArrayList<String>, private 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.text.text = items[position]
+        holder.cardView.setOnClickListener {
+            listener(items[position])
+        }
 
     }
 
@@ -28,4 +31,5 @@ class SectionRecyclerViewAdapter(private val items : ArrayList<String>, private 
 class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
 
     val text = view.txtView
+    val cardView = view.cardView
 }

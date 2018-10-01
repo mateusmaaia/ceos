@@ -3,6 +3,7 @@ package leviata.ceos.navigation
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.OnLifecycleEvent
+import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.view.Gravity
@@ -34,7 +35,7 @@ class NavigationPresenter(private val mActivity: NavigationActivity, private val
 
         when (itemIdValue) {
             NavigationActivity.HOME_ID -> replaceFragment(HomeFragment())
-            NavigationActivity.PERFIL_ID -> replaceFragment(ProfileFragment())
+            NavigationActivity.PERFIL_ID -> replaceFragment(ProfileFragment.newInstance("TESTE"))
 //            NavigationActivity.CRIAR_DESAFIO_ID -> replaceFragment(ChallengesFragment())
 //            NavigationActivity.GRUPOS_ID -> replaceFragment(GroupsFragment())
             NavigationActivity.RANKING_GERAL_ID -> replaceFragment(RankingFragment())
@@ -45,7 +46,8 @@ class NavigationPresenter(private val mActivity: NavigationActivity, private val
         return true
     }
 
-    private fun replaceFragment(fragment: Fragment){
+    fun replaceFragment(fragment: Fragment){
+
         mActivity.supportFragmentManager.beginTransaction().addToBackStack(null).replace(R.id.contentFragment, fragment, "Navigation").commit()
     }
 

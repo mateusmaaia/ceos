@@ -1,5 +1,6 @@
 package leviata.ceos.navigation
 
+import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -15,10 +16,13 @@ import leviata.ceos.databinding.FragmentRankingBinding
 class RankingFragment : Fragment() {
 
     lateinit var binding: FragmentRankingBinding
+    lateinit var viewModel: NavigationViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_ranking, container, false)
+
+        viewModel = ViewModelProviders.of(activity!!).get(NavigationViewModel::class.java)
 
         return binding.root
     }
@@ -26,6 +30,9 @@ class RankingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val binding = this.binding ?: return
+
+        val str = viewModel.getSelected()
+        binding.title.text = str.value
         setUpRecyclerView(binding)
         populateRecyclerView()
     }
@@ -44,6 +51,7 @@ class RankingFragment : Fragment() {
         val cont = context ?: return
         val adapter = RankingRecyclerViewAdapter(rankingPositions, usersArray, scoresArray, cont)
         binding.recyclerRanking.adapter = adapter
+
     }
 
 
