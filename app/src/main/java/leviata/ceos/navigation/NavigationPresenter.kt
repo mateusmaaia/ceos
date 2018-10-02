@@ -33,14 +33,14 @@ class NavigationPresenter(private val mActivity: NavigationActivity, private val
         }
 
         when (itemIdValue) {
-            NavigationActivity.HOME_ID -> replaceFragment(HomeFragment())
-            NavigationActivity.PERFIL_ID -> replaceFragment(ProfileFragment.newInstance("TESTE"))
-            NavigationActivity.CRIAR_DESAFIO_ID -> replaceFragment(CreateChallengeFragment())
-            NavigationActivity.GRUPOS_ID -> replaceFragment(GroupFragment())
-            NavigationActivity.RANKING_GERAL_ID -> replaceFragment(RankingFragment())
+        NavigationActivity.HOME_ID -> replaceFragment(HomeFragment())
+        NavigationActivity.PERFIL_ID -> replaceFragment(ProfileFragment.newInstance("Desafios"))
+        NavigationActivity.CRIAR_DESAFIO_ID -> replaceFragment(CreateChallengeFragment())
+        NavigationActivity.GRUPOS_ID -> replaceFragment(GroupFragment())
+        NavigationActivity.RANKING_GERAL_ID -> replaceFragment(RankingFragment())
 //            NavigationActivity.LOGOUT_ID -> replaceFragment(Logout())
 
-        }
+    }
 
         return true
     }
