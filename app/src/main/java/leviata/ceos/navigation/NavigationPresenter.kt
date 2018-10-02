@@ -7,10 +7,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.view.Gravity
-import leviata.ceos.ChallengeFragment
-import leviata.ceos.CreateChallengeFragment
-import leviata.ceos.ProfileFragment
-import leviata.ceos.R
+import leviata.ceos.*
 import leviata.ceos.databinding.ActivityNavigationBinding
 
 class NavigationPresenter(private val mActivity: NavigationActivity, private val mBinding: ActivityNavigationBinding) : LifecycleObserver {
@@ -39,7 +36,7 @@ class NavigationPresenter(private val mActivity: NavigationActivity, private val
             NavigationActivity.HOME_ID -> replaceFragment(HomeFragment())
             NavigationActivity.PERFIL_ID -> replaceFragment(ProfileFragment.newInstance("TESTE"))
             NavigationActivity.CRIAR_DESAFIO_ID -> replaceFragment(CreateChallengeFragment())
-//            NavigationActivity.GRUPOS_ID -> replaceFragment(GroupsFragment())
+            NavigationActivity.GRUPOS_ID -> replaceFragment(GroupFragment())
             NavigationActivity.RANKING_GERAL_ID -> replaceFragment(RankingFragment())
 //            NavigationActivity.LOGOUT_ID -> replaceFragment(Logout())
 

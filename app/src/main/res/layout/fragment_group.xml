@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/groups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="@dimen/default_title_size"
+            android:text="Meus Grupos"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/group1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:padding="10dp"
+            android:background="@color/whiteStyle"
+            android:textColor="@color/colorSecondary"
+            android:elevation="5dp"
+            android:textSize="@dimen/default_text_size"
+            android:text="Fiap"
+            android:drawableLeft="@drawable/book_icon"
+            app:layout_constraintTop_toBottomOf="@+id/groups"/>
+
+        <Button
+            android:id="@+id/group2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@color/whiteStyle"
+            android:textColor="@color/colorSecondary"
+            android:elevation="5dp"
+            android:textSize="@dimen/default_text_size"
+            android:text="Os Filosofos"
+            android:drawableLeft="@drawable/lamp_icon"
+            app:layout_constraintTop_toBottomOf="@+id/group1"/>
+
+        <Button
+            android:id="@+id/group3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@color/whiteStyle"
+            android:textColor="@color/colorSecondary"
+            android:elevation="5dp"
+            android:textSize="@dimen/default_text_size"
+            android:text="Os Campeões"
+            android:drawableLeft="@drawable/champions_icon"
+            app:layout_constraintTop_toBottomOf="@+id/group2"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/add_group_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.894"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/group3"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
