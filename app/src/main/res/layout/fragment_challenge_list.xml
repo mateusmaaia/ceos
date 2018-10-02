@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/challengeViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textSize="@dimen/default_title_size"
+            android:textAlignment="center"
+            android:paddingTop="20dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/challengeRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

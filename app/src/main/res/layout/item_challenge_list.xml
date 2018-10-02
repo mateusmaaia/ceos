@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:id="@+id/recycleChallenge">
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/recycleChallengeImage"
+        android:layout_width="16sp"
+        android:layout_height="16sp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/challenge_icon"/>
+
+    <TextView
+        android:id="@+id/recycleChallengeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteStyle"
+        android:gravity="center"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/recycleChallengeImage"
+        app:layout_constraintRight_toLeftOf="@+id/recycleChallengeButton"/>
+
+    <Button
+        android:id="@+id/recycleChallengeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteStyle"
+        android:gravity="center"
+        android:text="Resolver"
+        android:textColor="@color/attentionColor"
+        app:layout_constraintLeft_toRightOf="@+id/recycleChallengeTitle"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

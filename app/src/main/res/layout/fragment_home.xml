@@ -26,7 +26,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/recyclerLabelTec"
+                        android:id="@+id/recyclerLabel1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
@@ -34,29 +34,81 @@
                         android:textSize="20sp" />
 
                     <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recyclerHomeTec"
+                        android:id="@+id/recyclerHome1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
-                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabelTec" />
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabel1" />
 
 
                     <TextView
-                        android:id="@+id/recyclerLabelMat"
+                        android:id="@+id/recyclerLabel2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
                         android:layout_marginTop="10sp"
                         android:textColor="#000"
                         android:textSize="20sp"
-                        app:layout_constraintTop_toBottomOf="@+id/recyclerHomeTec" />
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerHome1" />
 
                     <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recyclerHomeMat"
+                        android:id="@+id/recyclerHome2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
-                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabelMat" />
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabel2" />
+
+                    <TextView
+                        android:id="@+id/recyclerLabel3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="10sp"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerHome2" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerHome3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabel3" />
+
+                    <TextView
+                    android:id="@+id/recyclerLabel4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginTop="10sp"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerHome3" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerHome4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabel4" />
+
+                    <TextView
+                        android:id="@+id/recyclerLabel5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="10sp"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerHome4" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerHome5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerLabel5" />
+
                 </android.support.constraint.ConstraintLayout>
 
             </android.support.v4.widget.NestedScrollView>
