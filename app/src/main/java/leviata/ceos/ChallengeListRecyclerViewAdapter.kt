@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_challenge_list.view.*
 
 
-class ChallengeListRecyclerViewAdapter(private val items : ArrayList<String>, private val isNull: Boolean, private val context: Context, val listener: (String) -> Unit) : RecyclerView.Adapter<ChallengeViewHolder>() {
+class ChallengeListRecyclerViewAdapter(private val items: ArrayList<String>, private val isNull: Boolean, private val context: Context, val listener: (String) -> Unit) : RecyclerView.Adapter<ChallengeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChallengeViewHolder {
         return ChallengeViewHolder(LayoutInflater.from(context).inflate(R.layout.item_challenge_list, parent, false))
@@ -27,7 +27,7 @@ class ChallengeListRecyclerViewAdapter(private val items : ArrayList<String>, pr
 
 }
 
-class ChallengeViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+class ChallengeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val title = view.recycleChallengeTitle
     val section = view.recycleChallenge
 }

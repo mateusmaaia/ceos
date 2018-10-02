@@ -28,31 +28,31 @@
                 android:id="@+id/summary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Resumo da matéria"
-                android:background="@drawable/square_textarea"
-                android:layout_marginTop="40dp"
                 android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/square_textarea"
+                android:hint="Resumo da matéria"
+                android:paddingBottom="50dp"
                 android:paddingHorizontal="10dp"
                 android:paddingTop="5dp"
-                android:paddingBottom="50dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_create_challenge"/>
+                app:layout_constraintTop_toBottomOf="@+id/title_create_challenge" />
 
             <EditText
                 android:id="@+id/question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enunciado do Desafio"
-                android:background="@drawable/square_textarea"
-                android:layout_marginTop="40dp"
                 android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/square_textarea"
+                android:hint="Enunciado do Desafio"
+                android:paddingBottom="50dp"
                 android:paddingHorizontal="10dp"
                 android:paddingTop="5dp"
-                android:paddingBottom="50dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/summary"/>
+                app:layout_constraintTop_toBottomOf="@+id/summary" />
 
             <TextView
                 android:id="@+id/title_radio"
@@ -65,74 +65,74 @@
                 android:textSize="@dimen/default_title_size"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/question"/>
+                app:layout_constraintTop_toBottomOf="@+id/question" />
 
             <EditText
                 android:id="@+id/radio1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Resposta Correta"
-                android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/square_textarea"
+                android:hint="Resposta Correta"
                 android:paddingHorizontal="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_radio"
-                android:background="@drawable/square_textarea"/>
+                app:layout_constraintTop_toBottomOf="@+id/title_radio" />
 
             <EditText
                 android:id="@+id/radio2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Resposta Errada"
-                android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/square_textarea"
+                android:hint="Resposta Errada"
                 android:paddingHorizontal="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radio1"
-                android:background="@drawable/square_textarea"/>
+                app:layout_constraintTop_toBottomOf="@+id/radio1" />
 
             <EditText
                 android:id="@+id/radio3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Resposta Errada"
-                android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/square_textarea"
+                android:hint="Resposta Errada"
                 android:paddingHorizontal="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radio2"
-                android:background="@drawable/square_textarea"/>
+                app:layout_constraintTop_toBottomOf="@+id/radio2" />
 
             <EditText
                 android:id="@+id/radio4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Resposta Errada"
-                android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/square_textarea"
+                android:hint="Resposta Errada"
                 android:paddingHorizontal="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radio3"
-                android:background="@drawable/square_textarea"/>
+                app:layout_constraintTop_toBottomOf="@+id/radio3" />
 
             <Button
-            android:id="@+id/btn_create_challenge"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="@color/colorPrimary"
-            android:elevation="5dp"
-            android:text="Enviar"
-            android:textColor="@color/whiteStyle"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radio4"
-            android:layout_marginBottom="15dp"/>
+                android:id="@+id/btn_create_challenge"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:elevation="5dp"
+                android:text="Enviar"
+                android:textColor="@color/whiteStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio4" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>
