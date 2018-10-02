@@ -6,4 +6,5 @@
     <color name="colorSecondary">#a9a9a9</color>
     <color name="colorAccent">#c5c5c5</color>
     <color name="whiteStyle">#ffffff</color>
+    <color name="gray">#A9A9A9</color>
 </resources>

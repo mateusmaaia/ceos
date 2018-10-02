@@ -18,10 +18,10 @@ class SectionRecyclerViewAdapter(private val items: ArrayList<String>, private v
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.text.text = items[position]
         holder.cardView.setOnClickListener {
-            if(position == 0 && icon == "tecnologia"){
+            if(position == 0 && icon == "mat"){
                 listener(items[position])
             } else {
-                Toast.makeText(context, "Ainda não há desafios para essa categoria.", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Ainda não há desafios para essa categoria.", Toast.LENGTH_SHORT).show()
             }
         }
 
