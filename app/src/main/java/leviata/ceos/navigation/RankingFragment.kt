@@ -31,8 +31,6 @@ class RankingFragment : Fragment() {
 
         val binding = this.binding ?: return
 
-        val str = viewModel.getSelected()
-        binding.title.text = str.value
         setUpRecyclerView(binding)
         populateRecyclerView()
     }

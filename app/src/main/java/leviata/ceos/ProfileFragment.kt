@@ -32,7 +32,7 @@ class ProfileFragment : Fragment() {
 
         binding.idTeste.text = idBadge
 
-        viewModel.select("Ranking")
+        viewModel.select("Desafios")
 
     }
 
