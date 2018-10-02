@@ -61,7 +61,7 @@ class HomeFragment : Fragment() {
 
         val cont = context ?: return
         //1
-        val adapter = SectionRecyclerViewAdapter(arrayListOf("Equações", "Integral", "Derivada", "Teorema de LaPlace", "Logaritmos"), "mat", cont){
+        val adapter = SectionRecyclerViewAdapter(arrayListOf("Equações", "Integral", "Derivada", "Teorema de LaPlace", "Logaritmos"), "mat", cont) {
             (activity as NavigationActivity).presenter.replaceFragment(ChallengeListFragment())
         }
         binding.recyclerHome1.adapter = adapter
@@ -69,28 +69,28 @@ class HomeFragment : Fragment() {
 
 
         //2
-        val adapter2 = SectionRecyclerViewAdapter(arrayListOf("Array", "Enum", "String", "Condicionais"), "tecnologia", cont){
+        val adapter2 = SectionRecyclerViewAdapter(arrayListOf("Array", "Enum", "String", "Condicionais"), "tecnologia", cont) {
 
         }
         binding.recyclerHome2.adapter = adapter2
         binding.recyclerLabel2.text = "Tecnologia"
 
         //3
-        val adapter3 = SectionRecyclerViewAdapter(arrayListOf("Termodinâmica", "Elétrica", "Cinemática", "Mecânica de fluídos"), "fisica",cont){
+        val adapter3 = SectionRecyclerViewAdapter(arrayListOf("Termodinâmica", "Elétrica", "Cinemática", "Mecânica de fluídos"), "fisica", cont) {
 
         }
         binding.recyclerHome3.adapter = adapter3
         binding.recyclerLabel3.text = "Fisica"
 
         //4
-        val adapter4 = SectionRecyclerViewAdapter(arrayListOf("Orgânica", "Cinética química", "Entalpia", "Inorgânica"), "quimica",cont){
+        val adapter4 = SectionRecyclerViewAdapter(arrayListOf("Orgânica", "Cinética química", "Entalpia", "Inorgânica"), "quimica", cont) {
 
         }
         binding.recyclerHome4.adapter = adapter4
         binding.recyclerLabel4.text = "Química"
 
         //5
-        val adapter5 = SectionRecyclerViewAdapter(arrayListOf("Revolução Francesa", "Idade média", "Guerra Fria"), "hist",cont){
+        val adapter5 = SectionRecyclerViewAdapter(arrayListOf("Revolução Francesa", "Idade média", "Guerra Fria"), "hist", cont) {
 
         }
         binding.recyclerHome5.adapter = adapter5

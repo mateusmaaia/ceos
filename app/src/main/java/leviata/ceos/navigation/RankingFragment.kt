@@ -47,7 +47,7 @@ class RankingFragment : Fragment() {
 
         var usersArray = arrayListOf("Wilson Oliveira", "Dário Augusto", "Sabrina Vieira", "Willian Sone", "Marcos Hon-ma", "Valéria Maia", "Fernanda Garcia")
         var scoresArray = arrayListOf("152", "139", "130", "125", "112", "100", "79")
-        var rankingPositions = arrayListOf("1","2", "3", "4", "5", "6", "7")
+        var rankingPositions = arrayListOf("1", "2", "3", "4", "5", "6", "7")
         val cont = context ?: return
         val adapter = RankingRecyclerViewAdapter(rankingPositions, usersArray, scoresArray, cont)
         binding.recyclerRanking.adapter = adapter

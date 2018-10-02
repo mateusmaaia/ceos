@@ -27,10 +27,10 @@ class NavigationPresenter(private val mActivity: NavigationActivity, private val
         }
     }
 
-    private fun changeNavigation(itemIdValue: Int): Boolean{
+    private fun changeNavigation(itemIdValue: Int): Boolean {
 
         //Needs this to avoid stackOverFlow
-        if(mBackPressedFlag) {
+        if (mBackPressedFlag) {
             mBackPressedFlag = false
             return true
         }
@@ -48,13 +48,13 @@ class NavigationPresenter(private val mActivity: NavigationActivity, private val
         return true
     }
 
-    fun replaceFragment(fragment: Fragment){
+    fun replaceFragment(fragment: Fragment) {
 
         mActivity.supportFragmentManager.beginTransaction().addToBackStack(null).replace(R.id.contentFragment, fragment, "Navigation").commit()
     }
 
 
-    fun openDrawer(){
+    fun openDrawer() {
         mBinding.drawerLayout.openDrawer(Gravity.START, true)
     }
 

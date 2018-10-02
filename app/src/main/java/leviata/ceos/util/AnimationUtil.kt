@@ -11,7 +11,7 @@ fun View.startAnimation(@AnimRes animRes: Int) {
 
 fun View.startAnimation(@AnimRes animRes: Int, onAnimationEnd: (() -> Unit)?) {
     val animation = AnimationUtils.loadAnimation(context, animRes)
-    if(onAnimationEnd != null) {
+    if (onAnimationEnd != null) {
         animation.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationRepeat(p0: Animation?) {}
 
@@ -26,13 +26,12 @@ fun View.startAnimation(@AnimRes animRes: Int, onAnimationEnd: (() -> Unit)?) {
 }
 
 fun View.startAnimation(isVisible: Boolean, @AnimRes startAnimRes: Int, @AnimRes endAnimRes: Int) {
-    if(isVisible) {
-        if(this.visibility != View.VISIBLE) {
+    if (isVisible) {
+        if (this.visibility != View.VISIBLE) {
             this.visibility = View.VISIBLE
             this.startAnimation(startAnimRes, null)
         }
-    }
-    else if(this.visibility != View.INVISIBLE) {
+    } else if (this.visibility != View.INVISIBLE) {
         this.startAnimation(endAnimRes) {
             this.visibility = View.INVISIBLE
         }
