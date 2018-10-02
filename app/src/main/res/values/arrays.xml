@@ -11,12 +11,12 @@
     </array>
 
     <array name="icons">
-        <item>@drawable/lock</item>
-        <item>@drawable/lock</item>
-        <item>@drawable/lock</item>
-        <item>@drawable/lock</item>
-        <item>@drawable/lock</item>
-        <item>@drawable/lock</item>
+        <item>@drawable/home</item>
+        <item>@drawable/person</item>
+        <item>@drawable/quest</item>
+        <item>@drawable/group</item>
+        <item>@drawable/medal</item>
+        <item>@drawable/exit</item>
     </array>
 
 </resources>
