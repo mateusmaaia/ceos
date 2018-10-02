@@ -40,7 +40,7 @@ class ChallengeListFragment : Fragment() {
     private fun populateRecyclerView() {
 
         val cont = context ?: return
-        val adapter = ChallengeListRecyclerViewAdapter(arrayListOf("Raízes da equação"), false, cont) {
+        val adapter = ChallengeListRecyclerViewAdapter(arrayListOf("Raízes da equação", "carlinhos me ama", "bolsonaro nao", "sr burns nao da falta", "dafiti la vou eu", "god help me", "carlinhos arruma a view", "eu quero mum brasil novo", "aulas de tinder", "quem quer ser um milionario", "acabo a imaginacao"), false, cont) {
 
         }
         binding.challengeRecyclerView.adapter = adapter
