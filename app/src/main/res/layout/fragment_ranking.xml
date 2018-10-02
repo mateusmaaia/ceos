@@ -9,15 +9,15 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingTop="20dp"
             android:text="@string/ranking_title"
-            android:textSize="@dimen/default_title_size"
             android:textAlignment="center"
-            android:paddingTop="20dp"/>
+            android:textSize="@dimen/default_title_size" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerRanking"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="100dp"/>
+            android:layout_marginTop="100dp" />
     </android.support.constraint.ConstraintLayout>
 </layout>

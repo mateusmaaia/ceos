@@ -26,6 +26,7 @@
                 android:src="@drawable/ic_launcher_background" />
 
             <TextView
+                android:id="@+id/recycleItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_below="@id/recycleImage"
@@ -36,7 +37,6 @@
                 android:autoSizeMinTextSize="10sp"
                 android:autoSizeTextType="uniform"
                 android:gravity="center"
-                android:id="@+id/recycleItemTitle"
                 android:text="Test"
                 android:textColor="#000" />
 

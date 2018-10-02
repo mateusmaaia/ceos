@@ -16,7 +16,7 @@
         android:textColor="@color/colorSecondary"
         android:textSize="@dimen/default_text_size"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/userNameRanking"/>
+        app:layout_constraintRight_toLeftOf="@+id/userNameRanking" />
 
     <TextView
         android:id="@+id/userNameRanking"
@@ -27,7 +27,7 @@
         android:textColor="@color/colorSecondary"
         android:textSize="@dimen/default_text_size"
         app:layout_constraintLeft_toRightOf="@+id/positionRanking"
-        app:layout_constraintRight_toLeftOf="@+id/scoreRanking"/>
+        app:layout_constraintRight_toLeftOf="@+id/scoreRanking" />
 
     <TextView
         android:id="@+id/scoreRanking"
@@ -37,6 +37,6 @@
         android:gravity="center"
         android:textColor="@color/attentionColor"
         app:layout_constraintLeft_toRightOf="@+id/userNameRanking"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

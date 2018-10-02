@@ -25,7 +25,7 @@
                 android:background="?attr/colorPrimary"
                 android:elevation="4dp"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             <FrameLayout
                 android:id="@+id/contentFragment"
@@ -43,10 +43,10 @@
             android:layout_width="240dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:fitsSystemWindows="true"
             android:choiceMode="singleChoice"
             android:divider="#FF54"
-            android:dividerHeight="1dp" />
+            android:dividerHeight="1dp"
+            android:fitsSystemWindows="true" />
 
     </android.support.v4.widget.DrawerLayout>
 </layout>
