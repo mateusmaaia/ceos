@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import leviata.ceos.ChallengeFragment
 import leviata.ceos.ChallengeListRecyclerViewAdapter
 import leviata.ceos.R
 import leviata.ceos.databinding.FragmentChallengeListBinding
@@ -40,8 +41,8 @@ class ChallengeListFragment : Fragment() {
     private fun populateRecyclerView() {
 
         val cont = context ?: return
-        val adapter = ChallengeListRecyclerViewAdapter(arrayListOf("Raízes da equação", "Equações biquadradas", "A exponenciação", "Gráficos de primeiro grau", "Desafio de igualdade", "Eixo das ordenadas", "Áreas de Gráficos", "Desafio de Investimentos", "Distância de Ponto a ponto", "Equação de reta", "Equações trigonométricas"), false, cont) {
-
+        val adapter = ChallengeListRecyclerViewAdapter(arrayListOf("Raízes da equação", "Equações biquadradas", "A exponenciação", "Gráficos de primeiro grau", "Desafio de igualdade", "Eixo das ordenadas", "Áreas de Gráficos", "Desafio de Investimentos", "Distância de Ponto a ponto", "Equação de reta", "Equações trigonométricas"), arrayListOf(true, false, false, false, false, false, false, false, false, false, false), cont) {
+            (activity as NavigationActivity).presenter.replaceFragment(ChallengeFragment())
         }
         binding.challengeRecyclerView.adapter = adapter
         binding.challengeViewTitle.text = "Equações"
