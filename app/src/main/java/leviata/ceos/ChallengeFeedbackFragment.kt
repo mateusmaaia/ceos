@@ -1,25 +1,19 @@
 package leviata.ceos
 
-import android.content.Intent
-import android.support.v4.app.Fragment
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import leviata.ceos.databinding.FragmentChallengeBinding
-import leviata.ceos.navigation.NavigationActivity
+import leviata.ceos.databinding.FragmentChallengeFeedbackBinding
 
-class ChallengeFragment : Fragment() {
-    lateinit var binding: FragmentChallengeBinding
+class ChallengeFeedbackFragment : Fragment() {
+    lateinit var binding: FragmentChallengeFeedbackBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(
-                inflater, R.layout.fragment_challenge, container, false)
-
-        binding.btnDisplay.setOnClickListener {
-            (activity as NavigationActivity).presenter.replaceFragment(ChallengeFeedbackFragment())
-        }
+                inflater, R.layout.fragment_challenge_feedback, container, false)
 
         return binding.root
     }
@@ -28,5 +22,4 @@ class ChallengeFragment : Fragment() {
 
         val binding = this.binding ?: return
     }
-
 }

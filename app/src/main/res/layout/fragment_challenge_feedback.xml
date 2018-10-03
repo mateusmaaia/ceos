@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/answer_feedback"
+            android:textAlignment="center"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:textColor="@color/whiteStyle"
+            android:layout_marginTop="30dp"
+            android:textSize="40dp"
+            android:text="Errou"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/radio_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/default_text_size"
+            android:text="a) 12"
+            android:background="@color/gray"
+            android:textStyle="bold"
+            android:textColor="@color/whiteStyle"
+            android:padding="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/answer_feedback"/>
+
+        <TextView
+            android:id="@+id/tip_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Dica:"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_answer" />
+
+        <TextView
+            android:id="@+id/tip_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#000"
+            android:text="djsnfd fdsfhuofh dsufnsduin ufsnguofngo bfljf eajk  cd fjkwe fkj faewjkfekjf ewkje fewjkf ewjk few fnweoif wejk fijwe ijf ewiuf weijf gewijf aweije gijwea gi gfwier ajgi wiu"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/square_textarea"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tip_title" />
+
+        <Button
+        android:id="@+id/btn_back"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        android:text="Voltar para home"
+        android:textColor="@color/whiteStyle"
+        app:layout_constraintRight_toLeftOf="@+id/btn_indication"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tip_feedback" />
+
+
+        <Button
+            android:id="@+id/btn_indication"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorPrimary"
+            android:elevation="5dp"
+            android:text="Indicar ao Amigo"
+            android:textColor="@color/whiteStyle"
+            app:layout_constraintLeft_toRightOf="@+id/btn_back"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tip_feedback" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
