@@ -34,6 +34,13 @@ class MainActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             count++
 
+            val username = binding.username.text.toString()
+            val password = binding.password.text.toString()
+
+            if(username == "Administrador" && password == "123456"){
+                startActivity(Intent(this, NavigationActivity::class.java))
+            }
+
             if (count == 13) {
                 setImageLogo(getDrawable(R.drawable.mind), binding.logo)
                 Toast.makeText(this, "SHAZAM", Toast.LENGTH_LONG).show()
@@ -49,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
-            startActivity(Intent(this, NavigationActivity::class.java))
+
 
         }
 
