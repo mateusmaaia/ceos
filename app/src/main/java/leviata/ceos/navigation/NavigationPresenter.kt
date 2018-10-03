@@ -3,8 +3,10 @@ package leviata.ceos.navigation
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.OnLifecycleEvent
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v4.view.GravityCompat
 import android.view.Gravity
 import leviata.ceos.*
@@ -32,15 +34,18 @@ class NavigationPresenter(private val mActivity: NavigationActivity, private val
             return true
         }
 
-        when (itemIdValue) {
-        NavigationActivity.HOME_ID -> replaceFragment(HomeFragment())
-        NavigationActivity.PERFIL_ID -> replaceFragment(ProfileFragment.newInstance("Desafios"))
-        NavigationActivity.CRIAR_DESAFIO_ID -> replaceFragment(CreateChallengeFragment())
-        NavigationActivity.GRUPOS_ID -> replaceFragment(GroupFragment())
-        NavigationActivity.RANKING_GERAL_ID -> replaceFragment(RankingFragment())
-//            NavigationActivity.LOGOUT_ID -> replaceFragment(Logout())
+        var intent = Intent(mActivity, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
 
-    }
+        when (itemIdValue) {
+            NavigationActivity.HOME_ID -> replaceFragment(HomeFragment())
+            NavigationActivity.PERFIL_ID -> replaceFragment(ProfileFragment.newInstance("Desafios"))
+            NavigationActivity.CRIAR_DESAFIO_ID -> replaceFragment(CreateChallengeFragment())
+            NavigationActivity.GRUPOS_ID -> replaceFragment(GroupFragment())
+            NavigationActivity.RANKING_GERAL_ID -> replaceFragment(RankingFragment())
+            NavigationActivity.LOGOUT_ID -> mActivity.startActivity(intent)
+
+        }
 
         return true
     }

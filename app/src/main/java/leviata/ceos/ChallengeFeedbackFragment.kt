@@ -1,5 +1,6 @@
 package leviata.ceos
 
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -19,19 +20,46 @@ class ChallengeFeedbackFragment : Fragment() {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_challenge_feedback, container, false)
 
-        binding.btnBack.setOnClickListener {
-            (activity as NavigationActivity).presenter.replaceFragment(HomeFragment())
-        }
-
-        binding.btnIndication.setOnClickListener {
-            Toast.makeText(context, "Funcionalidade não disponível no momento", Toast.LENGTH_SHORT).show()
-        }
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val binding = this.binding ?: return
+
+        binding.btnBack.setOnClickListener {
+            (activity as NavigationActivity).presenter.replaceFragment(HomeFragment())
+        }
+
+        binding.btnIndication.setOnClickListener {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "VAI BRASIL")
+                type = "text/plain"
+            }
+            startActivity(sendIntent)
+        }
+
+        binding.radioAnswer.text = arguments?.getString(TEXT) ?:  ""
+
+        if(arguments?.getBoolean(IS_CORRECT) == true){
+            binding.tipFeedback.visibility = View.GONE
+            binding.tipTitle.visibility = View.GONE
+            binding.answerFeedback.text = "Acertou"
+        }
+    }
+
+    companion object {
+        private val IS_CORRECT = "IS_CORRECT"
+        private val TEXT = "TEXT"
+
+        fun newInstance(isCorrect: Boolean, text: String): ChallengeFeedbackFragment {
+            val bundle = Bundle()
+            bundle.putBoolean(IS_CORRECT, isCorrect)
+            bundle.putString(TEXT, text)
+            val fragment = ChallengeFeedbackFragment()
+            fragment.arguments = bundle
+            return fragment
+        }
     }
 }

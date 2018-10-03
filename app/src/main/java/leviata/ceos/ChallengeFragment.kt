@@ -1,13 +1,12 @@
 package leviata.ceos
 
-import android.content.Intent
-import android.support.v4.app.Fragment
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import android.widget.RadioButton
 import leviata.ceos.databinding.FragmentChallengeBinding
 import leviata.ceos.navigation.NavigationActivity
 
@@ -18,17 +17,35 @@ class ChallengeFragment : Fragment() {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_challenge, container, false)
 
-        binding.btnDisplay.setOnClickListener {
-            val radioValue = binding.radioThird.isChecked
-            (activity as NavigationActivity).presenter.replaceFragment(ChallengeFeedbackFragment())
-        }
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val binding = this.binding ?: return
+
+
+
+        binding.btnDisplay.setOnClickListener {
+
+            val radioButtonID = binding.radioQuestion.checkedRadioButtonId
+            var radioButton = binding.radioQuestion.findViewById(radioButtonID) as RadioButton
+            (activity as NavigationActivity).presenter.replaceFragment(ChallengeFeedbackFragment.newInstance(binding.radioThird.isChecked, radioButton.text.toString()))
+        }
+    }
+
+    companion object {
+        private val IS_CORRECT = "IS_CORRECT"
+        private val TEXT = "TEXT"
+
+        fun newInstance(isCorrect: Boolean, text: String): ChallengeFragment {
+            val bundle = Bundle()
+            bundle.putBoolean(IS_CORRECT, isCorrect)
+            bundle.putString(TEXT, text)
+            val fragment = ChallengeFragment()
+            fragment.arguments = bundle
+            return fragment
+        }
     }
 
 }
