@@ -7,6 +7,7 @@ class Look {
     var backgroundGradientScrim = "#8484ff"
     var backgroundButtonColorScrim = "#6451f7"
     var backgroundButtonGradientScrim = "#73efbf"
+    var lightBlue = "#4169E1"
 
     constructor()
 }

@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#992149ff</color>
     <color name="attentionColor">#00AF7A</color>
     <color name="colorSecondary">#a9a9a9</color>
-    <color name="colorAccent">#c5c5c5</color>
+    <color name="colorAccent">#545454</color>
     <color name="whiteStyle">#ffffff</color>
     <color name="gray">#A9A9A9</color>
 </resources>

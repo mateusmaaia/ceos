@@ -34,7 +34,11 @@ class ChallengeFeedbackFragment : Fragment() {
         binding.btnIndication.setOnClickListener {
             val sendIntent: Intent = Intent().apply {
                 action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, "VAI BRASIL")
+                if(arguments?.getBoolean(IS_CORRECT) == true) {
+                    putExtra(Intent.EXTRA_TEXT, "Eu consegui resolver o desafio 'Raízes da Equação' no aplicativo Ceos, será que você também consegue? https://goo.gl/AhHHGE")
+                } else {
+                    putExtra(Intent.EXTRA_TEXT, "Eu  não consegui resolver o desafio 'Raízes da Equação' no aplicativo Ceos, será que você consegue? https://goo.gl/AhHHGE")
+                }
                 type = "text/plain"
             }
             startActivity(sendIntent)

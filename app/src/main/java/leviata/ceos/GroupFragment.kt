@@ -20,7 +20,7 @@ class GroupFragment : Fragment() {
                 inflater, R.layout.fragment_group, container, false)
 
         binding.fab.setOnClickListener {
-            Toast.makeText(context, "No momento não é possivel criar novos grupos, tente novamente mais tarde.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Consiga 2.000 pontos para liberar a criação de grupos! ", Toast.LENGTH_SHORT).show()
         }
 
         binding.group1.setOnClickListener {
@@ -32,15 +32,15 @@ class GroupFragment : Fragment() {
         }
 
         binding.group3.setOnClickListener {
-            showMessage(context, "No momento só você faz parte do grupo %s, deseja convidar novos membros?", "FIAP")
+            showMessage(context, "No momento só você faz parte do grupo %s, deseja convidar novos membros?", "OS CAMPEÕES")
         }
 
         binding.group2.setOnClickListener {
-            Toast.makeText(context, "No momento só você faz parte do grupo 'OS FILÓSOFOS'.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Você não tem permissão para convidar novos membros para o grupo 'OS FILÓSOFOS'.", Toast.LENGTH_SHORT).show()
         }
 
         binding.group1.setOnClickListener {
-            Toast.makeText(context, "No momento só você faz parte do grupo 'FIAP'.", Toast.LENGTH_SHORT).show()
+            showMessage(context, "No momento só você faz parte do grupo %s, deseja convidar novos membros?", "FIAP")
         }
 
         return binding.root

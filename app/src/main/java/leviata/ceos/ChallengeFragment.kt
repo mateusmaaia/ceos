@@ -9,6 +9,10 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import leviata.ceos.databinding.FragmentChallengeBinding
 import leviata.ceos.navigation.NavigationActivity
+import android.text.method.ScrollingMovementMethod
+import android.widget.Scroller
+
+
 
 class ChallengeFragment : Fragment() {
     lateinit var binding: FragmentChallengeBinding
@@ -24,10 +28,7 @@ class ChallengeFragment : Fragment() {
 
         val binding = this.binding ?: return
 
-
-
         binding.btnDisplay.setOnClickListener {
-
             val radioButtonID = binding.radioQuestion.checkedRadioButtonId
             var radioButton = binding.radioQuestion.findViewById(radioButtonID) as RadioButton
             (activity as NavigationActivity).presenter.replaceFragment(ChallengeFeedbackFragment.newInstance(binding.radioThird.isChecked, radioButton.text.toString()))

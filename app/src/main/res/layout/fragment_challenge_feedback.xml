@@ -87,7 +87,7 @@
             android:layout_marginBottom="15dp"
             android:background="@color/colorPrimary"
             android:elevation="5dp"
-            android:text="Indicar ao Amigo"
+            android:text="Indicar a um Amigo"
             android:textColor="@color/whiteStyle"
             app:layout_constraintLeft_toRightOf="@+id/btn_back"
             app:layout_constraintRight_toRightOf="parent"
