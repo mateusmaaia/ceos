@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_home.*
 import leviata.ceos.R
 import leviata.ceos.SectionRecyclerViewAdapter
 import leviata.ceos.databinding.FragmentHomeBinding
@@ -16,11 +17,13 @@ class HomeFragment : Fragment() {
 
     lateinit var binding: FragmentHomeBinding
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_home, container, false)
 
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

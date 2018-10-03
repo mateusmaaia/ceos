@@ -21,12 +21,23 @@ class RegisterActivity : AppCompatActivity() {
         binding.look = Look()
         var context = applicationContext
 
+
         binding.btnLogin.setOnClickListener {
-            Toast.makeText(context, "Pronto! Agora é só confirmar seu e-mail.", Toast.LENGTH_SHORT).show()
+            val username = binding.username.text.toString().isEmpty()
+            val password = binding.password.text.toString().isEmpty()
+            val email = binding.email.text.toString().isEmpty()
+
+                if(!checkNotNull(username) && !checkNotNull(password) && !checkNotNull(email)) {
+                    Toast.makeText(context, "Pronto! Agora é só confirmar seu e-mail.", Toast.LENGTH_SHORT).show()
+                } else {
+                    binding.btnLogin.setOnClickListener {
+                        Toast.makeText(context, "Ops, parece que estão faltando alguns campos, não?", Toast.LENGTH_SHORT).show()
+                    }
+            }
         }
 
         setImageLogo(getDrawable(R.drawable.ceos), binding.logo)
-        binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
+        binding.logo.visibility = View.VISIBLE
 
     }
 

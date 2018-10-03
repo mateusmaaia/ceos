@@ -34,29 +34,14 @@ class MainActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             count++
 
-            val username = binding.username.text.toString()
-            val password = binding.password.text.toString()
+            val username = binding.username.text.toString().toLowerCase()
+            val password = binding.password.text.toString().toLowerCase()
 
-            if(username == "Administrador" && password == "123456"){
+            if(username == "daniel.samsung" && password == "123456"){
                 startActivity(Intent(this, NavigationActivity::class.java))
+            } else {
+                Toast.makeText(this, "Senha ou usuário incorretos!", Toast.LENGTH_SHORT).show()
             }
-
-            if (count == 13) {
-                setImageLogo(getDrawable(R.drawable.mind), binding.logo)
-                Toast.makeText(this, "SHAZAM", Toast.LENGTH_LONG).show()
-                binding.logo.visibility = View.VISIBLE
-                count = 0
-                binding.logo.startAnimation(R.anim.fade_in) {
-                    handler.postDelayed({
-                        binding.logo.visibility = View.INVISIBLE
-                        setImageLogo(getDrawable(R.drawable.ceos), binding.logo)
-                        binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
-                    }, 2000)
-
-                }
-
-            }
-
 
         }
 
