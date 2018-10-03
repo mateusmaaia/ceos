@@ -22,6 +22,26 @@ class GroupFragment : Fragment() {
             Toast.makeText(context, "No momento não é possivel criar novos grupos, tente novamente mais tarde.", Toast.LENGTH_SHORT).show()
         }
 
+        binding.group1.setOnClickListener {
+            Toast.makeText(context, "No momento não é possivel criar novos grupos, tente novamente mais tarde.", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.group2.setOnClickListener {
+            Toast.makeText(context, "No momento não é possivel criar novos grupos, tente novamente mais tarde.", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.group3.setOnClickListener {
+            Toast.makeText(context, "No momento só você faz parte do grupo 'OS CAMPEÕES'.", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.group2.setOnClickListener {
+            Toast.makeText(context, "No momento só você faz parte do grupo 'OS FILÓSOFOS'.", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.group1.setOnClickListener {
+            Toast.makeText(context, "No momento só você faz parte do grupo 'FIAP'.", Toast.LENGTH_SHORT).show()
+        }
+
         return binding.root
     }
 
