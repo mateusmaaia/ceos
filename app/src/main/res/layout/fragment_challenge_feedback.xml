@@ -57,7 +57,7 @@
             android:padding="10dp"
             android:layout_marginTop="5dp"
             android:textColor="#000"
-            android:text="djsnfd fdsfhuofh dsufnsduin ufsnguofngo bfljf eajk  cd fjkwe fkj faewjkfekjf ewkje fewjkf ewjk few fnweoif wejk fijwe ijf ewiuf weijf gewijf aweije gijwea gi gfwier ajgi wiu"
+            android:text="Para resolver esse desafio você deve comparar o delta da equação com as raízes encontradas. No final somar essas raízes."
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/square_textarea"
             app:layout_constraintLeft_toLeftOf="parent"
