@@ -32,8 +32,6 @@ class MainActivity : AppCompatActivity() {
         binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
 
         binding.btnLogin.setOnClickListener {
-            count++
-
             val username = binding.username.text.toString().toLowerCase()
             val password = binding.password.text.toString().toLowerCase()
 

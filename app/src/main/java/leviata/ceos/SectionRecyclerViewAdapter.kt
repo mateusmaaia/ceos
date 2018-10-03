@@ -1,5 +1,6 @@
 package leviata.ceos
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.support.v7.widget.RecyclerView
@@ -28,7 +29,9 @@ class SectionRecyclerViewAdapter(private val items: ArrayList<String>, private v
         }
 
         if(position != 0 || icon != "mat"){
-            holder.cardView.setBackgroundColor(Color.parseColor("#40a9a9a9"))
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#25a9a9a9"))
+            holder.icon.imageAlpha = 30
+            holder.text.setTextColor(Color.parseColor("#40000000"))
         }
 
         if (icon == "tecnologia") {
