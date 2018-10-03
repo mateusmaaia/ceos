@@ -104,18 +104,6 @@
                     android:text="d) 15"
                     android:textColor="#000" />
 
-                <EditText
-                    android:id="@+id/notepad"
-                    android:layout_width="300sp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:maxLines="30"
-                    android:lines="4"
-                    app:layout_constraintRight_toRightOf="parent"
-                    android:hint="Anotações"
-                    android:padding="5dp"/>
-
             </RadioGroup>
 
             <Button
