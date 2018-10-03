@@ -1,6 +1,7 @@
 package leviata.ceos
 
 import android.content.Context
+import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +23,12 @@ class SectionRecyclerViewAdapter(private val items: ArrayList<String>, private v
                 listener(items[position])
             } else {
                 Toast.makeText(context, "Ainda não há desafios para essa categoria.", Toast.LENGTH_SHORT).show()
+
             }
+        }
+
+        if(position != 0 || icon != "mat"){
+            holder.cardView.setBackgroundColor(Color.parseColor("#40a9a9a9"))
         }
 
         if (icon == "tecnologia") {
