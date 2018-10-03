@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import leviata.ceos.MessageUtil.showMessage
 import leviata.ceos.databinding.FragmentGroupBinding
 
 class GroupFragment : Fragment() {
@@ -31,7 +32,7 @@ class GroupFragment : Fragment() {
         }
 
         binding.group3.setOnClickListener {
-            Toast.makeText(context, "No momento só você faz parte do grupo 'OS CAMPEÕES'.", Toast.LENGTH_SHORT).show()
+            showMessage(context, "No momento só você faz parte do grupo %s, deseja convidar novos membros?", "FIAP")
         }
 
         binding.group2.setOnClickListener {
