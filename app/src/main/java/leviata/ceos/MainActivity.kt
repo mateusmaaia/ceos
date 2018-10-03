@@ -32,15 +32,15 @@ class MainActivity : AppCompatActivity() {
         binding.logo.visibility = View.VISIBLE // caso seja necessario, colocar no xml como visibl
 
         binding.btnLogin.setOnClickListener {
-            startActivity(Intent(this, NavigationActivity::class.java))
-//            val username = binding.username.text.toString().toLowerCase()
-//            val password = binding.password.text.toString().toLowerCase()
-//
-//            if(username == "daniel.samsung" && password == "123456"){
-//                startActivity(Intent(this, NavigationActivity::class.java))
-//            } else {
-//                Toast.makeText(this, "Senha ou usuário incorretos!", Toast.LENGTH_SHORT).show()
-//            }
+//            startActivity(Intent(this, NavigationActivity::class.java))
+            val username = binding.username.text.toString().toLowerCase()
+            val password = binding.password.text.toString().toLowerCase()
+
+            if(username == "daniel.samsung" && password == "123456"){
+                startActivity(Intent(this, NavigationActivity::class.java))
+            } else {
+                Toast.makeText(this, "Senha ou usuário incorretos!", Toast.LENGTH_SHORT).show()
+            }
 
         }
 
